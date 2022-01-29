@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w3.css">
+    <title>Tugas 13</title>
+</head>
+<body>
+    <div class="w3-sidebar w3-bar-block w3-blue-gray w3-card" style="width:130px;">
+        <h5 class="w3-bar-item">MENU</h5>
+        <button class="w3-bar-item w3-button tablink" onclick="openProfile(event,'yeonjun')">Yeonjun</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openProfile(event,'soobin')">Soobin</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openProfile(event,'beomgyu')">Beomgyu</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openProfile(event,'taehyun')">Taehyun</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openProfile(event,'hueningkai')">Huening Kai</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openProfile(event, 'profilediri')">Profile Diri</button>
+    </div>
+    
+    <div style="margin-left: 130px;">
+        <div class="w3-padding">MEMBER TXT</div>
+        <div id="yeonjun" class="w3-container w3-animate-left profile" style="display: none;">
+            <h2>Yeonjun</h2>
+            <img src="yeonjun.jpg" alt="yeonjun" style="width: 200px; height: auto;">
+            <p>Member pertama dari grup TXT.<br>Nama: Choi Yeon jun<br>Tempat Lahir: Seoul, Korea Selatan<br>Tanggal Lahir: 13 September 1999<br>Tinggi: 181.5cm<br>Posisi: Main Rapper, Vocalist, Dancer</p>
+        </div>
+
+        <div id="soobin" class="w3-container w3-animate-left profile" style="display: none;">
+            <h2>Soobin</h2>
+            <img src="soobin.jpg" alt="soobin" style="width: 200px; height: auto;">
+            <p>Member ke-dua dari grup TXT.<br>Nama: Choi Soo bin<br>Tempat Lahir: Ansan-si, Korea Selatan<br>Tanggal Lahir: 5 December 2000<br>Tinggi: 185cm<br>Posisi: Leader, Vocalist, Rapper, Dancer</p>
+        </div>
+
+        <div id="beomgyu" class="w3-container w3-animate-left profile" style="display: none;">
+            <h2>Beomgyu</h2>
+            <img src="beomgyu.jpg" alt="beomgyu" style="width: 200px; height: auto;"> 
+            <p>Memeber ke-tiga dari grup TXT.<br>Nama: Choi Beom gyu<br>Tempat Lahir: Daegu, Korea Selatan<br>Tanggal Lahir: 13 Maret 2001<br>Tinggi: 180cm<br>Posisi: Center, Vocalist, Rapper, Dancer, Visual</p>
+        </div>
+        
+        <div id="taehyun" class="w3-container w3-animate-left profile" style="display: none;">
+            <h2>Taehyun</h2>
+            <img src="taehyun.jpg" alt="taehyun" style="width: 200px; height: auto;">
+            <p>Member ke-empat dari grup TXT.<br>Nama: Kang Tae hyun<br>Tempat Lahir: Seoul, Korea Selatan<br>Tanggal Lahir: 5 Februari 2002<br>Tinggi: 177cm<br>Posisi: Main Vocalist, Dancer, Rapper</p>
+        </div>
+
+        <div id="hueningkai" class="w3-container w3-animate-left profile" style="display: none;">
+            <h2>Huening Kai</h2>
+            <img src="hueningkai.jpg" alt="hueningkai" style="width: 200px; height: auto;">
+            <p>Member ke-lima sekaligus member termuda TXT.<br>Nama: Kai Kamal Huening (Huening Kai)<br>Tempat Lahir: Hawaii, USA<br>Tanggal Lahir: 14 Agustus 2002<br>Tinggi: 183cm<br>Posisi: Main Vocalist, Dancer, Rapper, Maknae</p>
+        </div>
+        <div id="profilediri" class="w3-container w3-animate-left profile" style="display: none;">
+            <h2>Profile Diri</h2>
+            <p>NIM: 10121067<br>NAMA: SYAHMAR CHAIRIZA IDRUS<br>KELAS: IF-2</p>
+        </div>
+    </div>
+
+    <script>
+    function openProfile(evt, profile) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("profile");
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-green", ""); 
+        }
+        document.getElementById(profile).style.display = "block";
+        evt.currentTarget.className += " w3-green";
+       }
+    </script>
+</body>
+</html>
